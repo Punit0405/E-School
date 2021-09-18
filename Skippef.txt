@@ -1,0 +1,2 @@
+Regex in Email in registration module
+Skipped Comments slider section in home page

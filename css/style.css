@@ -1,0 +1,125 @@
+::-webkit-scrollbar {
+    width: 5px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 50px grey; 
+    border-radius: 10px;
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: red; 
+    border-radius: 50px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #b30000; 
+  }
+  
+
+.navbar-brand{font-family: 'Jost', sans-serif;
+font-size: 2em;
+font-weight: bold;
+color:white;
+}
+
+.custom-nav .custom-nav-item a{
+    color: white !important;
+}
+.custom-nav-item:hover{
+    background-color: #dc3545;
+    border: 1px solid #dc3545;
+    border-radius: 10px;
+}
+.video-parent{
+    position: relative;
+
+}
+.remove-video-margin{
+    margin: 0%;
+    padding: 0%;
+
+}
+video{
+    width: 100%;
+    height: 100%;
+}
+.video-overlay{
+    position: absolute;
+    top:0;
+    left:0;
+    height: 100%;
+    background-color: black;
+    width:100%;
+    z-index: 1;
+    opacity: 0.8;
+}
+.video-content{
+    position: absolute;
+    z-index: 2;
+    top: 35%;
+    left: 35%;
+    color: white;
+    text-align: center;
+}
+.bottom-banner{
+    color: white;
+    padding:10px;
+}
+
+.manual{
+    background-image: linear-gradient(240deg,#ed213a,#93291e);
+    padding: 3rem;
+    height: 13rem;
+    margin-top: 4rem;
+    transform: rotate(10deg);
+    /* z-index: -5; */
+}
+a.social-hover{
+    
+    text-decoration: none;
+    
+}
+a.text-dark{
+    
+    text-decoration: none;
+    
+}
+.adminclass{
+    
+    text-decoration: none;
+    
+}
+a.social-hover:hover{
+    padding: 5px 100px;
+    text-decoration: none;
+    background-color: rgb(95, 93, 93);
+}
+
+
+@media screen and (min-width:0px) and (max-width:700px) {
+    .vid-inner-content,.txt-banner{
+        display: none;
+    }
+    .video-content{
+        top:12%;
+        left:60%;
+    }
+    .custom-nav .custom-nav-item a{
+        padding:10px 20px;
+        background-color: #225470;
+
+
+    }
+    .custom-nav-item:hover{
+        background-color: none;
+        border: none;
+        border-radius: none;
+    }
+    .manual{
+        display: none;
+    }
+}
