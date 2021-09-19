@@ -16,7 +16,16 @@ include('./header.php');
         <div class="video-content">
             <h1 class="vid-inner-content">Welcome To E-School</h1>
             <small class="vid-inner-content">First Learn Then Remove 'L' From Learn</small><br>
-            <a href="#" class="btn btn-danger my-3" data-bs-toggle="modal" data-bs-target="#registrationmodal" >Get IN</a>
+            <?php 
+            if(!isset($_SESSION['is_login'])){
+
+              echo  '<a href="#" class="btn btn-danger my-3" data-bs-toggle="modal" data-bs-target="#registrationmodal" >Get IN</a>';
+            }else{
+              echo '<a href="#" class="btn btn-danger my-3"  >My Profile</a>';
+
+            }
+
+            ?>
             
         </div> 
     </div>

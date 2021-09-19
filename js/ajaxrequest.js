@@ -119,7 +119,11 @@ function checkstulogin() {
           $('#loginsuccessmsg').html(
             '<div class="spinner-border text-success" role="status">'
           );
-          location.href="index.php";
+          setTimeout(() => {
+              
+              location.href="index.php";
+            }, 500);
+          
         }
         
         

@@ -77,27 +77,11 @@
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
               </div>
               <div class="modal-body">
-                <!--start admin login form  -->
-                <form id="adminloginform">
-
-
-                  <div class="form-group mb-3">
-                    <i class="fas fa-envelope"></i>
-                    <label for="adminloginemail" class="px-2 font-weight-bold">Admin Email</label>
-                    <input type="text" class="form-control" name="adminloginemail" id="adminloginemail" placeholder="Email">
-
-                  </div>
-                  <div class="mb-3">
-                    <i class="fas fa-key"></i><label for="adminloginpassword" class="px-2 font-weight-bold">Admin Password</label>
-                    <input type="password" name="adminloginpassword" id="adminloginpassword" class="form-control" placeholder="Password">
-                  </div>
-
-
-                </form>
-                <!-- end login form  -->
+                <?php include('./admin.php');?>
               </div>
               <div class="modal-footer">
-                <button type="button" class="btn btn-primary" id="adminloginbtn">Login</button>
+              <span id="adminlogmsg"></span>  
+              <button type="button" class="btn btn-primary" onclick="checkadminlogin()" id="adminloginbtn">Login</button>
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
               </div>
             </div>
@@ -120,6 +104,7 @@
         <script src="./js/jquery.js"></script>
         <script src="./js/all.min.js"></script>
         <script src="./js/ajaxrequest.js"></script>
+        <script src="./js/adminajax.js"></script>
         </body>
 
         </html>
