@@ -2,7 +2,15 @@
 <footer class="container-fluid bg-dark text-center p-2">
 
 
-  <small class="text-white">Copyright &copy; 2021 || Designed By E-School || <a href="#login" class="text-white adminclass " data-bs-toggle="modal" data-bs-target="#adminloginmodal">Admin Login</a></small>
+  <small class="text-white">Copyright &copy; 2021 || Designed By E-School 
+  <?php 
+  if(!isset($_SESSION['is_login'])){
+    echo ' || <a href="#login" class="text-white adminclass " data-bs-toggle="modal" data-bs-target="#adminloginmodal">Admin Login</a>';
+  
+
+  }
+  ?>  
+  </small>
 </footer>
 <!-- footer ends  -->
 

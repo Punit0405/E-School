@@ -1,6 +1,6 @@
 $(document).ready(function () {
   // ajax call for verification
-  $("#stuemail").on("keypress blur", function () {
+  $("#stuemail").on("keyup blur", function () {
     let stuemail = $("#stuemail").val();
     $.ajax({
       url: "student/emailverification.php",

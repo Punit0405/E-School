@@ -31,7 +31,7 @@
 
                                     ?>
                                 </h4>
-                                <a href="#" class="btn text-white">View</a>
+                                <a href="students.php" class="btn text-white">View</a>
                             </div>
                         </div>
                     </div>

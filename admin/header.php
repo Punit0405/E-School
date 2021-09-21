@@ -49,7 +49,7 @@ if (!isset($_SESSION['is_admin_login'])) {
                         <li class="nav-item"><a href="#" class="nav-link">
                                 <i class="fab fa-accessible-icon"></i>&nbsp;Lessons
                             </a></li>
-                        <li class="nav-item"><a href="#" class="nav-link">
+                        <li class="nav-item"><a href="students.php" class="nav-link">
                                 <i class="fas fa-users"></i>&nbsp;Students
                             </a></li>
                         <li class="nav-item"><a href="#" class="nav-link">
@@ -58,7 +58,7 @@ if (!isset($_SESSION['is_admin_login'])) {
                         <li class="nav-item"><a href="#" class="nav-link">
                                 <i class="fas fa-table"></i>&nbsp;Payment Status
                             </a></li>
-                        <li class="nav-item"><a href="#" class="nav-link">
+                        <li class="nav-item"><a href="adminchangepass.php" class="nav-link">
                                 <i class="fas fa-key"></i>&nbsp;Change Password
                             </a></li>
                         <li class="nav-item"><a href="../logout.php" class="nav-link">

@@ -6,7 +6,7 @@ include('../admin/header.php');
 
 
     <!-- Table  -->
-    <p class="bg-dark text-white p-2"> List Of Course Ordered</p>
+    <p class="bg-dark text-white p-2"> List Of Courses</p>
     <?php 
     $tablesql="SELECT * FROM course";
     $result=$conn->query($tablesql);
