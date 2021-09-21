@@ -8,9 +8,14 @@
                             <div class="car-header">Courses</div>
                             <div class="card-body">
                                 <h4 class="card-title">
-                                    5
+                                    <?php 
+                                    $sql1="SELECT * FROM course";
+                                    $result1=$conn->query($sql1);
+                                    echo $result1->num_rows;
+
+                                    ?>
                                 </h4>
-                                <a href="#" class="btn text-white">View</a>
+                                <a href="courses.php" class="btn text-white">View</a>
                             </div>
                         </div>
                     </div>
@@ -19,7 +24,12 @@
                             <div class="car-header">Students</div>
                             <div class="card-body">
                                 <h4 class="card-title">
-                                    25
+                                <?php 
+                                    $sql2="SELECT * FROM student";
+                                    $result2=$conn->query($sql2);
+                                    echo $result2->num_rows;
+
+                                    ?>
                                 </h4>
                                 <a href="#" class="btn text-white">View</a>
                             </div>

@@ -74,6 +74,7 @@
             <div class="modal-content">
               <div class="modal-header">
                 <h5 class="modal-title" id="adminloginmodalLabel">Admin Login</h5>
+                
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
               </div>
               <div class="modal-body">
@@ -81,6 +82,7 @@
               </div>
               <div class="modal-footer">
               <span id="adminlogmsg"></span>  
+              <small class="text-dark">Already Logged In ?</small><a href="./admin/admindashboard.php" class="btn btn-success">Click Here</a>
               <button type="button" class="btn btn-primary" onclick="checkadminlogin()" id="adminloginbtn">Login</button>
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
               </div>

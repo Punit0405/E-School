@@ -53,101 +53,40 @@ include('./header.php');
 
 
     <!-- end text banner -->
+    <?php 
+    $tablesql="SELECT * FROM course";
+    $result=$conn->query($tablesql);?>
     <!-- start Most popular course -->
     <div class="container mt-5">
         <h1 class="text-center">Popular Courses</h1>
         <!-- Start Most POP CARD decks -->
         <div class="row row-cols-1 row-cols-md-3 my-3 g-4">
-
+          <?php 
+          for($i=0;$i<6;$i++){$row=$result->fetch_assoc();
+          ?>
+           
           <div class="col">
+            <a href="#Contact" class="text-decoration-none">
            <div class="card">
-                <img src="" class="card-img-top" alt="Guitar" srcset="">
+             <img src="../StudentPortal/image/" alt="" srcset="">
+                <img <?php echo "src = \"".$row['course_img']."\"";?> class="card-img-top" alt="Guitar" srcset="">
                 <div class="card-body">
-                    <h5 class="card-title">Lorem ipsum dolor sit amet consectetur adipisicing elit.</h5>
-                    <p class="card-text">Lorem ipsum dolor sit amet c onsectetur adipisicing elit. Sapiente aut repellendus soluta molestias ad doloremque repudiandae aliquid reprehenderit earum quae!</p></div>
+                    <h5 class="card-title text-dark"><?php echo $row['course_name']?></h5>
+                    <p class="card-text text-dark"><?php echo  $row['course_desc']?></p></div>
                 <div class="card-footer">
-                        <p class="card-text-d-inline">Price: <small><del>&#8377 2000</del></small><span class="font-weight-bolder">&#8377 200</span></p>
+                        <p class="card-text-d-inline text-dark">Price: <small><del>&#8377 <?php echo $row['course_original_price']?></del></small><span class="font-weight-bolder">&#8377 <?php echo $row['course_price']?></span></p>
                         <a href="#" class="btn btn-danger text-white font-weight-bolder float-right">Enroll</a>
                   </div>
                 
             </div>
-          </div>
-          <div class="col">
-           <div class="card">
-                <img src="" class="card-img-top" alt="Guitar" srcset="">
-                <div class="card-body">
-                    <h5 class="card-title">Lorem ipsum dolor sit amet consectetur adipisicing elit.</h5>
-                    <p class="card-text">Lorem ipsum dolor sit amet c onsectetur adipisicing elit. Sapiente aut repellendus soluta molestias ad doloremque repudiandae aliquid reprehenderit earum quae!</p></div>
-                <div class="card-footer">
-                        <p class="card-text-d-inline">Price: <small><del>&#8377 2000</del></small><span class="font-weight-bolder">&#8377 200</span></p>
-                        <a href="#" class="btn btn-danger text-white font-weight-bolder float-right">Enroll</a>
-                  </div>
-                
-            </div>
-          </div>
-          <div class="col">
-           <div class="card">
-                <img src="" class="card-img-top" alt="Guitar" srcset="">
-                <div class="card-body">
-                    <h5 class="card-title">Lorem ipsum dolor sit amet consectetur adipisicing elit.</h5>
-                    <p class="card-text">Lorem ipsum dolor sit amet c onsectetur adipisicing elit. Sapiente aut repellendus soluta molestias ad doloremque repudiandae aliquid reprehenderit earum quae!</p></div>
-                <div class="card-footer">
-                        <p class="card-text-d-inline">Price: <small><del>&#8377 2000</del></small><span class="font-weight-bolder">&#8377 200</span></p>
-                        <a href="#" class="btn btn-danger text-white font-weight-bolder float-right">Enroll</a>
-                  </div>
-                
-            </div>
-          </div>
+          </div></a>
+          
+          <?php }?>
+           
 
         </div>
         <!-- end Most POP CARD decks -->
-        <!-- card deck 2 -->
-        <div class="row row-cols-1 row-cols-md-3 my-3 g-4">
-
-          <div class="col">
-           <div class="card">
-                <img src="" class="card-img-top" alt="Guitar" srcset="">
-                <div class="card-body">
-                    <h5 class="card-title">Lorem ipsum dolor sit amet consectetur adipisicing elit.</h5>
-                    <p class="card-text">Lorem ipsum dolor sit amet c onsectetur adipisicing elit. Sapiente aut repellendus soluta molestias ad doloremque repudiandae aliquid reprehenderit earum quae!</p></div>
-                <div class="card-footer">
-                        <p class="card-text-d-inline">Price: <small><del>&#8377 2000</del></small><span class="font-weight-bolder">&#8377 200</span></p>
-                        <a href="#" class="btn btn-danger text-white font-weight-bolder float-right">Enroll</a>
-                  </div>
-                
-            </div>
-          </div>
-          <div class="col">
-           <div class="card">
-                <img src="" class="card-img-top" alt="Guitar" srcset="">
-                <div class="card-body">
-                    <h5 class="card-title">Lorem ipsum dolor sit amet consectetur adipisicing elit.</h5>
-                    <p class="card-text">Lorem ipsum dolor sit amet c onsectetur adipisicing elit. Sapiente aut repellendus soluta molestias ad doloremque repudiandae aliquid reprehenderit earum quae!</p></div>
-                <div class="card-footer">
-                        <p class="card-text-d-inline">Price: <small><del>&#8377 2000</del></small><span class="font-weight-bolder">&#8377 200</span></p>
-                        <a href="#" class="btn btn-danger text-white font-weight-bolder float-right">Enroll</a>
-                  </div>
-                
-            </div>
-          </div>
-          <div class="col">
-           <div class="card">
-                <img src="" class="card-img-top" alt="Guitar" srcset="">
-                <div class="card-body">
-                    <h5 class="card-title">Lorem ipsum dolor sit amet consectetur adipisicing elit.</h5>
-                    <p class="card-text">Lorem ipsum dolor sit amet c onsectetur adipisicing elit. Sapiente aut repellendus soluta molestias ad doloremque repudiandae aliquid reprehenderit earum quae!</p></div>
-                <div class="card-footer">
-                        <p class="card-text-d-inline">Price: <small><del>&#8377 2000</del></small><span class="font-weight-bolder">&#8377 200</span></p>
-                        <a href="#" class="btn btn-danger text-white font-weight-bolder float-right">Enroll</a>
-                  </div>
-                
-            </div>
-          </div>
-
-        </div>
-        
-        
-        <!-- card deck 2 ends -->
+       
         <div class="text-center m-2">
             <a href="" class="btn btn-success btn-sm">View ALL COURSES</a>
         </div>

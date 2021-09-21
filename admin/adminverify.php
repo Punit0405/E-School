@@ -5,7 +5,7 @@ if(!isset($_SESSION)){
 }
 include_once('../dbconnection.php'); 
 
-if(!isset($_SESSION['is_login'])){
+if(!isset($_SESSION['is_admin_login'])){
 
     if(isset($_POST['checklogemail']) && isset($_POST['adminlogemail']) && isset($_POST['adminlogpass'])){
         $adminlogemail= $_POST['adminlogemail'];

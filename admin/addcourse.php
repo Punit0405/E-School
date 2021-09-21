@@ -13,8 +13,9 @@ if (isset($_POST['courseSubmitBtn'])) {
         $course_original_price = $_POST['course_original_price'];
         $course_img = $_FILES['course_img']['name'];
         $course_img_temp = $_FILES['course_img']['tmp_name'];
-        $img_folder = '../image/courseimg/' . $course_img;
-        move_uploaded_file($course_img_temp, $img_folder);
+        $img_folder = './image/courseimg/' . $course_img;
+        $img_folder1 = '../image/courseimg/' . $course_img;
+        move_uploaded_file($course_img_temp, $img_folder1);
 
         $sql = "INSERT INTO course (course_name,course_desc,course_author,course_img,course_duration,course_price,course_original_price) VALUES ('$course_name','$course_desc','$course_author','$img_folder','$course_duration','$course_price','$course_original_price')";
         if ($conn->query($sql) == TRUE) {
